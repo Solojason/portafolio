@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import andersonImg from "../assets/projects/Anderson.png";
-import ccegytImg from "../assets/projects/CCEGYT.png";
-import jlcodedevImg from "../assets/projects/JLCodedev.png";
+import andersonImg from "../assets/projects/andersen/Anderson.png";
+import ccegytImg from "../assets/projects/ccegyt/CCEGYT.png";
+import jlcodedevImg from "../assets/projects/jlcodedev/JLCodedev.png";
 
 export default function Projects() {
   const projects = [
