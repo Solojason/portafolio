@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import andersonImg from "../assets/projects/andersen/Anderson.png";
 import ccegytImg from "../assets/projects/ccegyt/CCEGYT.png";
-import jlcodedevImg from "../assets/projects/jlcodedev/JLCodedev.png";
+import jlcodedevImg from "../assets/projects/jlcodedev/JLCodeDev.png";
 
 export default function Projects() {
   const projects = [
