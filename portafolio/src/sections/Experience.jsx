@@ -3,16 +3,24 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const jobs = [
     {
-      company: "PLayer Group",
-      role: "Ingeniero IT",
-      period: "2024 - Presente",
-      description: "Resolución de problemas IT, gestión de servidores y soporte a usuarios.",
+      company: "Player Group",
+      role: "Ingeniero TI",
+      period: "Septiembre 2024 - Presente",
+      description: [
+        "Soporte y personalización de equipos (Windows, macOS, tablets e impresoras).",
+        "Gestión de seguridad con backups en OneDrive y monitoreo de red UNIFI.",
+        "Administración de Office 365 y Google Workspace.",
+      ],
     },
     {
-      company: "Sonda México",
-      role: "Agente de Service Desk",
-      period: "2021 - 2024",
-      description: "Soporte técnico a usuarios, resolución de incidencias y gestión de tickets.",
+      company: "Sonda México (Scotiabank)",
+      role: "Agente de Service Desk 1B",
+      period: "Abril 2021 - Septiembre 2024",
+      description: [
+        "Gestión de incidencias y soporte remoto con ServiceNow.",
+        "Instalación y solución de problemas en Microsoft Office y software corporativo.",
+        "Soporte a usuarios corporativos y sucursales bancarias.",
+      ],
     },
   ];
 
@@ -26,40 +34,31 @@ export default function Experience() {
       viewport={{ once: true }}
     >
       <div className="container">
-        <h2 className="fw-bold text-center text-primary mb-4">Experiencia Profesional</h2>
-
-        {/* Contenedor animado para las tarjetas */}
-        <motion.div
-          className="row justify-content-center"
-          initial="hidden"
-          whileInView="visible"
-          transition={{ staggerChildren: 0.3 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="fw-bold text-center text-primary mb-4">💼 Experiencia Profesional</h2>
+        <div className="row justify-content-center">
           {jobs.map((job, index) => (
             <motion.div
               key={index}
               className="col-md-6"
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
             >
-              <motion.div
-                className="card shadow mb-4"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
+              <div className="card shadow mb-4">
                 <div className="card-body">
                   <h5 className="card-title fw-bold">{job.role} - <span className="text-primary">{job.company}</span></h5>
                   <h6 className="card-subtitle mb-2 text-muted">{job.period}</h6>
-                  <p className="card-text">{job.description}</p>
+                  <ul className="list-unstyled">
+                    {job.description.map((task, idx) => (
+                      <li key={idx}>✅ {task}</li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

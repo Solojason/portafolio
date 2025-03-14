@@ -12,7 +12,9 @@ export default function Home() {
       // Si ya estamos en la página principal, solo hacer scroll
       const projectsSection = document.getElementById("projects");
       if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: "smooth" });
+        const offset = 80; // Ajustar según altura del navbar
+        const sectionPosition = projectsSection.getBoundingClientRect().top + window.scrollY - offset;
+        projectsSection.scrollIntoView({ top: sectionPosition, behavior: "smooth" });
       }
     } else {
       // Si estamos en otra página, ir primero a "/" y luego hacer scroll
@@ -20,7 +22,9 @@ export default function Home() {
       setTimeout(() => {
         const projectsSection = document.getElementById("projects");
         if (projectsSection) {
-          projectsSection.scrollIntoView({ behavior: "smooth" });
+          const offset = 80;
+          const sectionPosition = projectsSection.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: sectionPosition, behavior: "smooth" });
         }
       }, 200);
     }
@@ -35,8 +39,16 @@ export default function Home() {
       transition={{ duration: 0.8 }}
     >
       <div className="container text-center">
-        <h1 className="display-3 fw-bold">Hola, soy <span className="text-primary">Jason Rojas</span></h1>
-        <p className="lead">Soy un desarrollador junior & IT Specialist apasionado por la tecnología.</p>
+        {/* Título llamativo */}
+        <h1 className="display-3 fw-bold">
+          ¡Hola, soy <span className="text-primary">Jason Rojas</span>! 👋
+        </h1>
+        
+        {/* Breve descripción */}
+        <p className="lead text-muted">
+          Ingeniero en Sistemas | Desarrollador Web | IT Specialist <br />
+          Apasionado por la tecnología, la optimización de procesos y el desarrollo.
+        </p>
         
         {/* Contenedor Flexbox para espaciar los botones */}
         <div className="d-flex justify-content-center gap-3 mt-4">
@@ -46,7 +58,7 @@ export default function Home() {
             whileHover={{ scale: 1.1 }}
             onClick={handleGoToProjects}
           >
-            Ver mis Proyectos
+            🚀 Ver mis Proyectos
           </motion.button>
 
           {/* Botón con menú desplegable para elegir el CV */}
@@ -59,11 +71,11 @@ export default function Home() {
               aria-expanded="false"
               whileHover={{ scale: 1.1 }}
             >
-              Descargar CV
+              📄 Descargar CV
             </motion.button>
             <ul className="dropdown-menu" aria-labelledby="dropdownCV">
-              <li><a className="dropdown-item" href={cvEs} download>📄 Español</a></li>
-              <li><a className="dropdown-item" href={cvEn} download>📄 Inglés</a></li>
+              <li><a className="dropdown-item" href={cvEs} download>📄 🇪🇸 Español</a></li>
+              <li><a className="dropdown-item" href={cvEn} download>📄 🇺🇸 English</a></li>
             </ul>
           </div>
         </div>
