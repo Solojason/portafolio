@@ -17,12 +17,12 @@ import ccegytImg6 from "../assets/projects/ccegyt/CCEGYT_6.png";
 import ccegytImg7 from "../assets/projects/ccegyt/CCEGYT_7.png";
 import ccegytImg8 from "../assets/projects/ccegyt/CCEGYT_8.png";
 import ccegytImg9 from "../assets/projects/ccegyt/CCEGYT_9.png";
-import jlcodedevImg from "../assets/projects/jlcodedev/JLCodedev.png";
-import jlcodedev1Img from "../assets/projects/jlcodedev/JLCodedev_1.png";
-import jlcodedev2Img from "../assets/projects/jlcodedev/JLCodedev_2.png";
-import jlcodedev3Img from "../assets/projects/jlcodedev/JLCodedev_3.png";
-import jlcodedev4Img from "../assets/projects/jlcodedev/JLCodedev_4.png";
-import jlcodedev5Img from "../assets/projects/jlcodedev/JLCodedev_5.png";
+import jlcodedevImg from "../assets/projects/jlcodedev/JLCodeDev.png";
+import jlcodedev1Img from "../assets/projects/jlcodedev/JLCodeDev_1.png";
+import jlcodedev2Img from "../assets/projects/jlcodedev/JLCodeDev_2.png";
+import jlcodedev3Img from "../assets/projects/jlcodedev/JLCodeDev_3.png";
+import jlcodedev4Img from "../assets/projects/jlcodedev/JLCodeDev_4.png";
+import jlcodedev5Img from "../assets/projects/jlcodedev/JLCodeDev_5.png";
 
 // 📌 Datos de los proyectos con imágenes y descripciones detalladas
 const projects = {
